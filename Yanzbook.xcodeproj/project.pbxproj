@@ -20,6 +20,8 @@
 		2C6030942011085D00DCE667 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6030912011085B00DCE667 /* Bolts.framework */; };
 		2C6030952011085D00DCE667 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6030922011085D00DCE667 /* FBSDKCoreKit.framework */; };
 		2C6030972011207200DCE667 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C6030962011207200DCE667 /* GoogleService-Info.plist */; };
+		2C6374B420145B71007C4902 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6374B320145B71007C4902 /* FeedVC.swift */; };
+		2C6374B620145BF7007C4902 /* UserAccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6374B520145BF7007C4902 /* UserAccountDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		2C6030912011085B00DCE667 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2C6030922011085D00DCE667 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2C6030962011207200DCE667 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C6374B320145B71007C4902 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		2C6374B520145BF7007C4902 /* UserAccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountDetails.swift; sourceTree = "<group>"; };
 		90F9177D6777FFE969B8FAAE /* Pods_Yanzbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yanzbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73DE0EB2BA03CEC438607E8 /* Pods-Yanzbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yanzbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yanzbook/Pods-Yanzbook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +119,7 @@
 		2C5B9B37200EE4040051E24E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C6374B520145BF7007C4902 /* UserAccountDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5B9B26200EE0E80051E24E /* SignInVC.swift */,
+				2C6374B320145B71007C4902 /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,11 +223,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yanzbook/Pods-Yanzbook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -268,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6374B420145B71007C4902 /* FeedVC.swift in Sources */,
 				2C60308D201101B900DCE667 /* CustomUIButton.swift in Sources */,
 				2C60308E201101B900DCE667 /* CustomUIView.swift in Sources */,
 				2C5B9B27200EE0E80051E24E /* SignInVC.swift in Sources */,
+				2C6374B620145BF7007C4902 /* UserAccountDetails.swift in Sources */,
 				2C60308C201101B900DCE667 /* CustomUITextField.swift in Sources */,
 				2C5B9B25200EE0E80051E24E /* AppDelegate.swift in Sources */,
 			);

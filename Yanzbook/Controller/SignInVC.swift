@@ -10,6 +10,8 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
+
 
 class SingInVC: UIViewController {
     
@@ -25,6 +27,24 @@ class SingInVC: UIViewController {
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if KeychainWrapper.standard.string(forKey: "uid") != nil {
+            if FIRAuth.auth()?.currentUser == nil {
+                let _ = KeychainWrapper.standard.removeAllKeys()
+                print("YAN: Removed the auto-login Keychain")
+            } else {
+                print("YAN: Found an ID in Keychain. Auto login is ENABLED.")
+                performSegue(withIdentifier: "showFeedVC", sender: nil)
+            }
+        }
+        
+        if KeychainWrapper.standard.string(forKey: "uid") == nil {
+            print("YAN: Found nil in Keychain. Auto-login is DISABLED.")
+        }
+        
+    }
 
 
     @IBAction func facebookBtnPressed(_ sender: Any) {
@@ -32,7 +52,7 @@ class SingInVC: UIViewController {
     }
     
     @IBAction func LoginBtnPressed(_ sender: Any) {
-        performFirebaseLogin()
+        //performFirebaseLogin()
     }
     
     func performFacebookLogin() {
@@ -62,12 +82,20 @@ class SingInVC: UIViewController {
         
         if email != "", password != "" {
             //Firebase email and password Login logic
+            
             checkEmailAndPassword(email: email, password: password)
             print("Firebase login logic running...")
             
-            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user, error) in
+            
+            
+            
+            FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     
+                    let userID = user?.uid
+                    let saveAccount: Bool = KeychainWrapper.standard.set(userID!, forKey: "uid")
+                    print("YAN: Succesfully Logged in with Email and password")
+                    print("YAN: uid\(userID!) - saveAccount \(saveAccount)")
                 }
             })
             
@@ -107,7 +135,22 @@ class SingInVC: UIViewController {
             if error != nil {
                 print("YAN: Unable to authenticated with Firebase - \(error.debugDescription)")
             } else {
+                
+                let userAccount = UserAccountDetails()
+                
+                let userID = user?.uid
+                let saveAccount = KeychainWrapper.standard.set(userID!, forKey: "uid")
+                let userEmail = FIRAuth.auth()?.currentUser?.email
+                let userDisplayName = FIRAuth.auth()?.currentUser?.displayName
                 print("YAN: Successfully authenticated with Firebase")
+                print("YAN: userID: \(userID!) - saveAccount: \(saveAccount)")
+                
+                userAccount.email = userEmail!
+                userAccount.displayName = userDisplayName!
+                userAccount.userID = userID!
+                userAccount.accountType = "Facebook Account logged in."
+                
+                self.performSegue(withIdentifier: "showFeedVC", sender: nil)
             }
         })
     }
