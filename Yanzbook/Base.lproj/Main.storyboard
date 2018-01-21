@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sing InVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SingInVC" customModule="Yanzbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0k-dF-SCF" customClass="CustomUIView" customModule="Yanzbook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="180"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0RG-Yg-UTf">
+                                        <rect key="frame" x="259.5" y="27.5" width="250" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="vau-sA-atw"/>
+                                            <constraint firstAttribute="width" constant="250" id="zeW-Kh-RYs"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1515216231" green="0.54484570030000001" blue="0.82416504619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="b8B-k6-LGV"/>
+                                    <constraint firstItem="0RG-Yg-UTf" firstAttribute="centerY" secondItem="L0k-dF-SCF" secondAttribute="centerY" id="ibC-Gn-88p"/>
+                                    <constraint firstItem="0RG-Yg-UTf" firstAttribute="centerX" secondItem="L0k-dF-SCF" secondAttribute="centerX" id="kJg-Pi-aHg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMZ-zA-SUc">
+                                <rect key="frame" x="0.0" y="894" width="768" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you don't have an accoun yet, we will create one for you automatically with your first Log-in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-Gr-5pY">
+                                        <rect key="frame" x="8" y="8" width="768" height="114"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1108257124" green="0.4114622181" blue="0.63135095990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0Xe-Gr-5pY" secondAttribute="trailing" constant="-8" id="7mE-HA-QZV"/>
+                                    <constraint firstItem="0Xe-Gr-5pY" firstAttribute="leading" secondItem="fMZ-zA-SUc" secondAttribute="leading" constant="8" id="GhF-SM-CPu"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Xe-Gr-5pY" secondAttribute="bottom" constant="8" id="P9i-Ob-MPV"/>
+                                    <constraint firstItem="0Xe-Gr-5pY" firstAttribute="top" secondItem="fMZ-zA-SUc" secondAttribute="top" constant="8" id="pf5-cu-8XT"/>
+                                    <constraint firstAttribute="height" constant="130" id="uuN-9N-4RM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Log-in method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIX-fj-iGE">
+                                <rect key="frame" x="238" y="210" width="292" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="K6B-Se-isy"/>
+                                    <constraint firstAttribute="width" constant="292" id="oyD-FR-dH7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-J4-2bJ" customClass="CustomUIButton" customModule="Yanzbook" customModuleProvider="target">
+                                <rect key="frame" x="296.5" y="279" width="175" height="175"/>
+                                <color key="backgroundColor" red="0.1515216231" green="0.54484570030000001" blue="0.82416504619999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="GtI-X2-vPs"/>
+                                    <constraint firstAttribute="width" constant="175" id="mhl-bq-U6H"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="87.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzj-lh-Q39"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tII-LA-cLy">
+                                <rect key="frame" x="206.5" y="494" width="355" height="180"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="myEmail@domain.com" placeholder="Email address..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-S9-NhP" customClass="CustomUITextField" customModule="Yanzbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="46.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="somePassword" placeholder="Password..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zs3-ex-VTI" customClass="CustomUITextField" customModule="Yanzbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66.5" width="355" height="47"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-V4-eyV" customClass="CustomUIButton" customModule="Yanzbook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="133.5" width="355" height="46.5"/>
+                                        <color key="backgroundColor" red="0.7310606837272644" green="0.27888858318328857" blue="0.10740584880113602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="LoginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udR-17-ANU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="DnZ-3P-6Vp"/>
+                                    <constraint firstAttribute="width" constant="355" id="Ten-AZ-mhA"/>
+                                </constraints>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an Email and Password..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-49-Bga">
+                                <rect key="frame" x="269" y="682" width="230" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Jqy-aP-ZwD"/>
+                                    <constraint firstAttribute="width" constant="230" id="LVz-NE-96a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L0k-dF-SCF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Vr-gL-5xU"/>
+                            <constraint firstItem="L0k-dF-SCF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="26g-JJ-Mf7"/>
+                            <constraint firstItem="HIX-fj-iGE" firstAttribute="top" secondItem="L0k-dF-SCF" secondAttribute="bottom" constant="30" id="2fi-UG-oZ7"/>
+                            <constraint firstItem="Y6f-J4-2bJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Wm-ts-vlc"/>
+                            <constraint firstItem="ggf-49-Bga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9rU-X1-Yhp"/>
+                            <constraint firstItem="L0k-dF-SCF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D1Q-8t-mKA"/>
+                            <constraint firstItem="tII-LA-cLy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KM0-sX-D0h"/>
+                            <constraint firstItem="ggf-49-Bga" firstAttribute="top" secondItem="tII-LA-cLy" secondAttribute="bottom" constant="8" id="Xmu-B2-tlZ"/>
+                            <constraint firstItem="Y6f-J4-2bJ" firstAttribute="top" secondItem="HIX-fj-iGE" secondAttribute="bottom" constant="30" id="lLb-Fd-mP6"/>
+                            <constraint firstItem="HIX-fj-iGE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2i-IK-24T"/>
+                            <constraint firstItem="tII-LA-cLy" firstAttribute="top" secondItem="Y6f-J4-2bJ" secondAttribute="bottom" constant="40" id="p0g-ST-fb1"/>
+                            <constraint firstItem="fMZ-zA-SUc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s1L-J0-9O5"/>
+                            <constraint firstItem="fMZ-zA-SUc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="stD-w6-U4b"/>
+                            <constraint firstItem="fMZ-zA-SUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tWK-5t-F6s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailAndPasswordErrorLabel" destination="ggf-49-Bga" id="AXa-zt-815"/>
+                        <outlet property="emailField" destination="cDa-S9-NhP" id="5VZ-Ed-AF0"/>
+                        <outlet property="passwordField" destination="zs3-ex-VTI" id="QWL-Ql-HUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.8125" y="33.984375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="devslopes-logo" width="150" height="94"/>
+        <image name="f" width="352" height="328"/>
+    </resources>
+</document>
